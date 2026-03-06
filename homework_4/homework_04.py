@@ -91,4 +91,6 @@ for sentence in adwentures_of_tom_sawer_sentences:
 # task 10
 """ Виведіть кількість слів останнього речення з adwentures_of_tom_sawer_sentences.
 """
-print(adventures_of_tom_sawer[-18:])
+last_sentence = adwentures_of_tom_sawer_sentences[-1]
+last_sentence_words = len(last_sentence.split())
+print(f"У останньому реченні {last_sentence_words} слова.")

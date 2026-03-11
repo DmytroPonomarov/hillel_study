@@ -29,14 +29,7 @@ for first, lastname, age, job, city in people_records:
     print(f"{first:<10} {lastname:<12} {age:<5} {job:<22} {city}")
 
 # 3 - check that all people in modified list with records indexes 6, 10, 13 have age >=30. Print condition check result.
-record_n_six = people_records[6]
-record_n_ten = people_records[10]
-record_n_thirteen = people_records[13]
-
-selected_records = [record_n_six, record_n_ten, record_n_thirteen]
-for record in selected_records:
-    age = record[2]
-    if age >= 30:
-        print(f"Selected person older than 30: {record}")
-    else:
-        print(f"Selected person younger than 30: {record}")
+selected_person_index = [6, 10, 13]
+selected_person = [people_records[record] for record in selected_person_index]
+age_verification = all(person[2] >= 30 for person in selected_person)
+print(age_verification)

@@ -47,32 +47,16 @@ car_data = {
     "Nissan Titan": ("silver", 2018, 5.6, "pickup", 35000),
 }
 search_criteria = (2017, 1.6, 36000)
-searching_year, searching_engine_volume, searching_price = (
-    search_criteria[0],
-    search_criteria[1],
-    search_criteria[2],
-)
 
-suitable_cars = []
-for car, details in car_data.items():
-    color, year, engine_volume, body_type, price = details
-    if (
-        year >= searching_year
-        and engine_volume >= searching_engine_volume
-        and price <= searching_price
-    ):
-        suitable_cars.append(car)
-
-suitable_car_price = []
-for brand in suitable_cars:
-    price = car_data[brand][4]
-    suitable_car_price.append((brand, price))
-
-suitable_car_price.sort(key=itemgetter(1))
-first_five_cars = suitable_car_price[:5]
-
-final_list = [f"{brand} ({price}$)" for brand, price in first_five_cars]
-
-print(
-    f"За заданними параметрами, нам підходять наступні варіанти авто {", ".join(final_list)}"
-)
+# using dict comprehension
+filtered_list = {
+    car: car_data[car]
+    for car in car_data
+    if car_data[car][1] >= 2017
+    and car_data[car][2] >= 1.6
+    and car_data[car][-1] <= 36000
+}
+filtered_list_price = {brand: details[-1] for brand, details in filtered_list.items()}
+sorted_list_price = sorted(filtered_list_price.items(), key=lambda item: item[1])
+first_five_cars = sorted_list_price[:5]
+print(first_five_cars)

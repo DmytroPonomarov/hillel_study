@@ -47,10 +47,12 @@ def arithmetic_mean():
 """  Написати функцію, яка приймає рядок та повертає його у зворотному порядку."""
 
 
-def revert_string_1():
-    text = input("Please enter something: ")
+def revert_string(text):
     return text[::-1]
 
+
+user_input = input("Please enter something: ")
+reverted_text = revert_string(user_input)
 
 # task 5
 """  Написати функцію, яка приймає список слів та повертає найдовше слово у списку."""
@@ -99,13 +101,13 @@ print(calculation_even_numbers())
 
 
 # # task 8
-def calculation_uniq_characters():
-    user_text = input("Please enter something: ")
-    user_text_uniq = set(user_text)
-    if len(user_text_uniq) > 10:
-        print(True)
-    else:
-        print(False)
+def calculation_uniq_characters(text):
+    user_text_uniq = set(text)
+    return len(user_text_uniq) > 10
+
+
+user_input = input("Please enter something: ")
+result = calculation_uniq_characters(user_input)
 
 
 # # task 9

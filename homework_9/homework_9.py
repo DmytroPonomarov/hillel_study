@@ -11,14 +11,16 @@ class Rhombus:
             else:
                 super().__setattr__(key, value)
         elif key == "angle_a":
-            super().__setattr__("angle_a", value)
-            super().__setattr__("angle_b", 180 - value)
+            if value >= 180:
+                raise ValueError("Value must be less then 180")
+            else:
+                super().__setattr__("angle_a", value)
 
     def angle_b_calculation(self):
         return 180 - self.angle_a
 
 
-input_data = Rhombus(1, 45)
+input_data = Rhombus(1, 140)
 print(input_data.side_a, input_data.angle_a, input_data.angle_b_calculation())
 
 

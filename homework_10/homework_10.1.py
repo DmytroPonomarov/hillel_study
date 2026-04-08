@@ -25,18 +25,18 @@ class Manager(Employee):
 
 
 class Developer(Employee):
-    def __init__(self, name, salary, programming_language="None"):
+    def __init__(self, name, salary, programming_language):
         Employee.__init__(self, name, salary)
         self.programming_language = programming_language
 
 
 class TeamLead(Manager, Developer):
-    def __init__(self, name, salary, department, team_size):
+    def __init__(self, name, salary, department, team_size, programming_language):
         Manager.__init__(self, name, salary, department)
+        Developer.__init__(self, name, salary, programming_language)
         self.team_size = team_size
 
-
-lead = TeamLead("Dmytro", 5000, "QA", 15)
+lead = TeamLead("Dmytro", 5000, "QA", 15, "Java")
 
 attrs = ["name", "salary", "department", "programming_language", "team_size"]
 assert all(hasattr(lead, attr) for attr in attrs), "Missing attribute"

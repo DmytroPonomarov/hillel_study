@@ -21,8 +21,9 @@ class Rhombus:
 
 
 input_data = Rhombus(1, 140)
-print(input_data.side_a, input_data.angle_a, input_data.angle_b_calculation())
 
+if __name__ == '__main__':
+    print(input_data.side_a, input_data.angle_a, input_data.angle_b_calculation())
 
 # Створіть клас геометричної фігури "Ромб". Клас повинен мати наступні атрибути:
 #

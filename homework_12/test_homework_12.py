@@ -4,7 +4,7 @@ from homework_12.test_data import h_repeats_in_original_text
 from homework_12.test_data import car_list_filtering
 from homework_12.test_data import lists_operations
 from homework_12.test_data import uniq_characters_count
-from homework_9.homework_9 import input_data
+from homework_9.homework_9 import input_data, Rhombus
 from homework_8.homework_8 import student_1
 from unittest.mock import patch
 
@@ -60,6 +60,16 @@ class TestGeometryFigure(TestCase):
         self.assertEqual(
             angle_b_value, angle_b_correct_value, f"Angle b value is wrong"
         )
+
+    def test_incorrect_data_processing_side_a(self):
+        input_data_custom = [-1, 100]
+        with self.assertRaises(ValueError, msg="ValueError was not raised for negative side_a"):
+            Rhombus(input_data_custom[0], input_data_custom[1])
+
+    def test_incorrect_data_processing_angle_a(self):
+        input_data_custom = [100, 181]
+        with self.assertRaises(ValueError, msg="ValueError was not raised for angle_a more then 180"):
+            Rhombus(input_data_custom[0], input_data_custom[1])
 
 
 class TestStudentData(TestCase):

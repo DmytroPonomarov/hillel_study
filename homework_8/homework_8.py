@@ -17,7 +17,9 @@ class Student:
 
 student_1 = Student("Dmytro", "Ponomarov", 20, 0)
 student_1.new_grade(30)
-student_1.print_student_info()
+
+if __name__ == '__main__':
+    student_1.print_student_info()
 
 
 # Створіть клас "Студент" з атрибутами "ім'я", "прізвище", "вік" та "середній бал".

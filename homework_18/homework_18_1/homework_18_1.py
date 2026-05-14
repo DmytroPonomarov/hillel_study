@@ -51,9 +51,9 @@ def download_image(link: str, file_name: str):
     with open(file_name, "wb") as handler:
         handler.write(response)
 
-
-items = rover_search()
-nasa_ids = nasa_ids_search(items)
-first_link, second_link = images_url_search(nasa_ids)
-download_image(first_link, "mars_photo1.jpg")
-download_image(second_link, "mars_photo2.jpg")
+if __name__ == "__main__":
+    items = rover_search()
+    nasa_ids = nasa_ids_search(items)
+    first_link, second_link = images_url_search(nasa_ids)
+    download_image(first_link, "mars_photo1.jpg")
+    download_image(second_link, "mars_photo2.jpg")

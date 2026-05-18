@@ -12,10 +12,8 @@ def logger_hb():
     return logger
 
 
-def file_analyze(file: str):
+def file_analyze(file: str, key: str):
     logger = logger_hb()
-    key = "TSTFEED0300|7E3E|0400"
-
     filtered_file = []
     with open(file, "r") as file:
         for line in file:
@@ -57,4 +55,4 @@ def file_analyze(file: str):
 
 
 if __name__ == "__main__":
-    file_analyze("hblog.txt")
+    file_analyze("hblog.txt", "TSTFEED0300|7E3E|0400")

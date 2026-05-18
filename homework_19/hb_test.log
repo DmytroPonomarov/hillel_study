@@ -1,5 +1,5 @@
-2026-05-17 17:39:03,806 - ERROR - Heartbeat time more or equal 33 second: 35 seconds! Time snap event time: 04:51:17 - previous time snap event time: 04:50:42 
-2026-05-17 17:39:03,806 - ERROR - Heartbeat time more or equal 33 second: 35 seconds! Time snap event time: 03:39:11 - previous time snap event time: 03:38:36 
-2026-05-17 17:39:03,807 - ERROR - Heartbeat time more or equal 33 second: 36 seconds! Time snap event time: 02:27:06 - previous time snap event time: 02:26:30 
-2026-05-17 17:39:03,807 - WARNING - Time between events: 32 second's! Time snap event time: 01:35:10 - previous time snap event time: 01:34:38 
-2026-05-17 17:39:03,807 - ERROR - Heartbeat time more or equal 33 second: 35 seconds! Time snap event time: 01:14:58 - previous time snap event time: 01:14:23 
+2026-05-18 15:34:28,466 - ERROR - Heartbeat time more or equal 33 second: 35 seconds! Time snap event time: 04:51:17 - previous time snap event time: 04:50:42 
+2026-05-18 15:34:28,467 - ERROR - Heartbeat time more or equal 33 second: 35 seconds! Time snap event time: 03:39:11 - previous time snap event time: 03:38:36 
+2026-05-18 15:34:28,468 - ERROR - Heartbeat time more or equal 33 second: 36 seconds! Time snap event time: 02:27:06 - previous time snap event time: 02:26:30 
+2026-05-18 15:34:28,469 - WARNING - Time between events: 32 second's! Time snap event time: 01:35:10 - previous time snap event time: 01:34:38 
+2026-05-18 15:34:28,469 - ERROR - Heartbeat time more or equal 33 second: 35 seconds! Time snap event time: 01:14:58 - previous time snap event time: 01:14:23 
